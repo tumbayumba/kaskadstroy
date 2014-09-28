@@ -1,14 +1,14 @@
 <?php
-/* @var $this MainPageController */
-/* @var $model MainPage */
+/* @var $this AboutController */
+/* @var $model About */
 
 $this->breadcrumbs=array(
-	'Главная страница'=>array('admin'),
+	'Все записи о компании'=>array('admin'),
 	'Создать',
 );
 
 $this->menu=array(
-	//array('label'=>'Все записи', 'url'=>array('index')),
+	//array('label'=>'List About', 'url'=>array('index')),
 	array('label'=>'Все записи', 'url'=>array('admin')),
 );
 ?>

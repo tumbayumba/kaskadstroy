@@ -1,13 +1,14 @@
 <?php
-/* @var $this MainPageController */
-/* @var $model MainPage */
+/* @var $this NewsController */
+/* @var $model News */
 
 $this->breadcrumbs=array(
-	'Главная страница'=>array('admin'),
-	$model->id,
+	'Новости'=>array('admin'),
+	$model->header,
 );
 
 $this->menu=array(
+	//array('label'=>'List News', 'url'=>array('index')),
 	array('label'=>'Новая запись', 'url'=>array('create')),
 	array('label'=>'Править', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Удалить', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
@@ -15,10 +16,14 @@ $this->menu=array(
 );
 ?>
 
+<h1>Просмотр записи "<?php echo $model->header; ?>"</h1>
+
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'description',
+		'header',
+		'create_date',
+		'content',
 	),
 )); ?>

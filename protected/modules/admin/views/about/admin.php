@@ -1,14 +1,14 @@
 <?php
-/* @var $this MainPageController */
-/* @var $model MainPage */
+/* @var $this AboutController */
+/* @var $model About */
 
 $this->breadcrumbs=array(
-	//'Main Pages'=>array('index'),
-	'Главная',
+	'О компании'=>array('admin'),
+	'Редактировать',
 );
 
 $this->menu=array(
-	//array('label'=>'List MainPage', 'url'=>array('index')),
+	//array('label'=>'List About', 'url'=>array('index')),
 	array('label'=>'Новая запись', 'url'=>array('create')),
 );
 
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#main-page-grid').yiiGridView('update', {
+	$('#about-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,17 +26,17 @@ $('.search-form form').submit(function(){
 ");*/
 ?>
 
-<h1>Редактировать главную страницу</h1>
+<h1>Редактировать "О компании"</h1>
 
 <?php //echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php /*$this->renderPartial('_search',array(
 	'model'=>$model,
-));*/ ?>
+)); */?>
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'main-page-grid',
+	'id'=>'about-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(

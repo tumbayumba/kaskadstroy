@@ -1,14 +1,14 @@
 <?php
-/* @var $this MainPageController */
-/* @var $model MainPage */
+/* @var $this NewsController */
+/* @var $model News */
 
 $this->breadcrumbs=array(
-	//'Main Pages'=>array('index'),
-	'Главная',
+	'Новости'=>array('admin'),
+	'Редактировать',
 );
 
 $this->menu=array(
-	//array('label'=>'List MainPage', 'url'=>array('index')),
+	//array('label'=>'List News', 'url'=>array('index')),
 	array('label'=>'Новая запись', 'url'=>array('create')),
 );
 
@@ -18,7 +18,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#main-page-grid').yiiGridView('update', {
+	$('#news-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");*/
 ?>
 
-<h1>Редактировать главную страницу</h1>
+<h1>Редактировать</h1>
 
 <?php //echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -36,12 +36,14 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'main-page-grid',
+	'id'=>'news-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'description',
+		//'id',
+		'header',
+		//'content',
+		'create_date',
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -1,21 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "tbl_ipoteka".
+ * This is the model class for table "tbl_services".
  *
- * The followings are the available columns in table 'tbl_ipoteka':
- * @property integer $id
+ * The followings are the available columns in table 'tbl_services':
+ * @property string $id
  * @property string $name
- * @property string $description
+ * @property string $content
  */
-class Ipoteka extends CActiveRecord
+class Services extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tbl_ipoteka';
+		return 'tbl_services';
 	}
 
 	/**
@@ -26,12 +26,10 @@ class Ipoteka extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, description', 'required'),
-			array('name', 'length', 'max'=>128),
-			array('description', 'length', 'max'=>255),
+			array('name, content', 'required'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description', 'safe', 'on'=>'search'),
+			array('id, name, content', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -53,8 +51,8 @@ class Ipoteka extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Название ипотеки',
-			'description' => 'Описание',
+			'name' => 'Название услуги',
+			'content' => 'Описание',
 		);
 	}
 
@@ -76,9 +74,9 @@ class Ipoteka extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('id',$this->id,true);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('description',$this->description,true);
+		$criteria->compare('content',$this->content,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -89,7 +87,7 @@ class Ipoteka extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Ipoteka the static model class
+	 * @return Services the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

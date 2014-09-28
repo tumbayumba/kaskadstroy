@@ -1,21 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "tbl_ipoteka".
+ * This is the model class for table "tbl_mission".
  *
- * The followings are the available columns in table 'tbl_ipoteka':
+ * The followings are the available columns in table 'tbl_mission':
  * @property integer $id
  * @property string $name
  * @property string $description
  */
-class Ipoteka extends CActiveRecord
+class Mission extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tbl_ipoteka';
+		return 'tbl_mission';
 	}
 
 	/**
@@ -27,8 +27,6 @@ class Ipoteka extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, description', 'required'),
-			array('name', 'length', 'max'=>128),
-			array('description', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, description', 'safe', 'on'=>'search'),
@@ -53,8 +51,8 @@ class Ipoteka extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Название ипотеки',
-			'description' => 'Описание',
+			'name' => 'Заголовок',
+			'description' => 'Описание миссии',
 		);
 	}
 
@@ -89,7 +87,7 @@ class Ipoteka extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Ipoteka the static model class
+	 * @return Mission the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
