@@ -1,0 +1,249 @@
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/jque...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/jquery.magnific-popup.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/jque...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/jquery.simpleplaceholder.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/w-se...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/w-search.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/w-sw...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/w-switcher.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/plug...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/plugins.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/jque...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/jquery.themepunch.plugins.min.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/jque...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/jquery.themepunch.revolution.min.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/navT...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/navToSelect.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/jque...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/jquery.tweet.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/w-ta...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/w-tabs.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/wayp...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/waypoints.min.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/w-la...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/w-lang.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "js".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('js')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('js')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/js/w-ti...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/js/w-timeline.js
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/img/sli...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/img/slides/slide2_01.png
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/img/sli...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/img/slides/slide4.jpg
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/img/sli...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/img/slides/slide2.jpg
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/img/sli...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/img/slides/slide5.jpg
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/img/sli...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/img/slides/slide2_02.png
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/img/sli...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/img/slides/slide7.jpg
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "img".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php:483
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(270): CController->missingAction('img')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('img')
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka/img/sli...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/ipoteka/img/slides/slide2_03.png
+HTTP_REFERER=http://kaskadstroy/index.php/ipoteka/ipoteka
+---
+2014/09/28 17:31:26 [error] [exception.CException] exception 'CException' with message 'Путь CAssetManager.basePath "/home/sergey/public_html/kaskadstroy/assets" задан неверно. Удостоверьтесь, что директория существует и доступна для записи пользователю, под которым запущен веб-сервер.' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/home/sergey/pu...')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /home/sergey/public_html/kaskadstroy/yii/framework/zii/widgets/CListView.php(217): CAssetManager->publish('/home/sergey/pu...')
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(147): CListView->init()
+#4 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /home/sergey/public_html/kaskadstroy/protected/views/ipoteka/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(126): require('/home/sergey/pu...')
+#7 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/sergey/pu...', Array, true)
+#8 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(869): CBaseController->renderFile('/home/sergey/pu...', Array, true)
+#9 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /home/sergey/public_html/kaskadstroy/protected/controllers/IpotekaController.php(128): CController->render('index', Array)
+#11 /home/sergey/public_html/kaskadstroy/yii/framework/web/actions/CInlineAction.php(49): IpotekaController->actionIndex()
+#12 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): CController->run('')
+#21 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ipoteka')
+#22 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#23 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/index.php/ipoteka
+---
