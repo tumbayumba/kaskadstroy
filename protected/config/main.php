@@ -21,6 +21,7 @@ return array(
 	),
 
 	'modules'=>array(
+		'admin',
 		// uncomment the following to enable the Gii tool
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',

@@ -63,13 +63,13 @@ $this->pageTitle=Yii::app()->name;
 											 data-y="150"
 											 data-speed="500"
 											 data-start="800"
-											 data-easing="easeOutExpo"  >Incredibly Powerful</div>
+											 data-easing="easeOutExpo"  >Купить квартиру</div>
 										<div class="caption medium_white randomrotate"
 											 data-x="100"
 											 data-y="220"
 											 data-speed="500"
 											 data-start="1200"
-											 data-easing="easeOutExpo"  >Modern jQuery Slider Revolution</div>
+											 data-easing="easeOutExpo"  >в новостройках Подмосковья</div>
 									</li>
 									
 								</ul>
@@ -109,34 +109,6 @@ $this->pageTitle=Yii::app()->name;
 											<div class="w-services-item-text">
 												<h3>Web Design</h3>
 												<p style="font-size:12px; text-align: justify;">Для многих жителей столицы покупка квартиры в Подмосковье является оптимальным вариантом приобретения современного комфортного жилья. ЗАО «КАСКАДСТРОЙСЕРВИС» ведет строительство жилых комплексов в Московской области, осуществляя продажу квартир по ценам, доступным абсолютно всем.</p>
-											</div>
-										</div>
-									</div>
-									<div class="w-services-item">
-										<div class="w-services-item-h animate_wfc">
-											<div class="w-services-item-icon">
-												<!--<i class="icon-html5"></i>-->
-												<div class="w-services-item-icon-img">
-													<img src="img/icon-example.png" alt="icon"/>
-												</div>
-											</div>											
-											<div class="w-services-item-text">
-												<h3>Web Design</h3>
-												<p style="font-size:12px; text-align: justify;">Близость популярных районов, например, Балашихи или МАРЗ Железнодорожного, рядом с которым находится строящийся мкрн. МАРЗ, к Москве позволяет их жителям быстро добираться в центральную часть столицы. Именно этот фактор в сочетании с желанием жить вдали от городской суеты объясняет стремление многих людей купить квартиру от застройщика.</p>
-											</div>
-										</div>
-									</div>
-									<div class="w-services-item">
-										<div class="w-services-item-h animate_wfc">
-											<div class="w-services-item-icon">
-												<!--<i class="icon-html5"></i>-->
-												<div class="w-services-item-icon-img">
-													<img src="img/icon-example.png" alt="icon"/>
-												</div>
-											</div>											
-											<div class="w-services-item-text">
-												<h3>Web Design</h3>
-												<p style="font-size:12px; text-align: justify;">Немаловажен и момент цены – прямые продажи квартир в новостройках Московской области застройщиком намного выгоднее в сравнении с покупкой жилья Подмосковья через посреднические компании.</p>
 											</div>
 										</div>
 									</div>
