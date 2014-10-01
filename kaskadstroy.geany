@@ -9,6 +9,7 @@ indent_mode=2
 [project]
 name=kaskadstroy
 base_path=/home/sergey/public_html
+description=
 
 [long line marker]
 long_line_behaviour=1

@@ -1398,3 +1398,177 @@ in /home/sergey/public_html/kaskadstroy/index.php (13)
 2014/09/29 02:20:41 [warning] [application] Не удалось присвоить небезопасный атрибут "create_date" класса "News".
 in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/NewsController.php (140)
 in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 03:54:29 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 03:54:29 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 03:58:02 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 03:58:02 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 03:59:22 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 03:59:22 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:01:16 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:01:16 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:03:27 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:03:27 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:22:50 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:22:50 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (73)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:32:25 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:32:25 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:34:29 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:34:29 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:35:30 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/home/sergey/public_html/kaskadstroy/yii/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/helpers/CHtml.php(158): renderAttributes()
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/helpers/CHtml.php(442): tag()
+#2 /home/sergey/public_html/kaskadstroy/protected/modules/admin/views/complex/_form.php(38): image()
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(126): require()
+#4 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(95): ComplexController->renderInternal()
+#5 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(869): ComplexController->renderFile()
+#6 /home/sergey/public_html/kaskadstroy/protected/modules/admin/views/complex/update.php(21): ComplexController->renderPartial()
+#7 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(126): require()
+#8 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(95): ComplexController->renderInternal()
+#9 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(869): ComplexController->renderFile()
+#10 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(782): ComplexController->renderPartial()
+#11 /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php(118): ComplexController->render()
+#12 unknown(0): ComplexController->actionUpdate()
+#13 /home/sergey/public_html/kaskadstroy/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#14 /home/sergey/public_html/kaskadstroy/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#15 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#16 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CFilterChain.php(133): ComplexController->runAction()
+#17 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#19 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CInlineFilter.php(58): ComplexController->filterAccessControl()
+#20 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#21 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(265): ComplexController->runActionWithFilters()
+#23 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): ComplexController->run()
+#24 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#25 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#26 /home/sergey/public_html/kaskadstroy/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=admin/complex/update&id=61
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/views/complex/_form.php (38)
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/views/complex/update.php (21)
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (118)
+2014/09/29 04:35:42 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/home/sergey/public_html/kaskadstroy/yii/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/helpers/CHtml.php(158): renderAttributes()
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/web/helpers/CHtml.php(442): tag()
+#2 /home/sergey/public_html/kaskadstroy/protected/modules/admin/views/complex/_form.php(38): image()
+#3 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(126): require()
+#4 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(95): ComplexController->renderInternal()
+#5 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(869): ComplexController->renderFile()
+#6 /home/sergey/public_html/kaskadstroy/protected/modules/admin/views/complex/update.php(21): ComplexController->renderPartial()
+#7 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(126): require()
+#8 /home/sergey/public_html/kaskadstroy/yii/framework/web/CBaseController.php(95): ComplexController->renderInternal()
+#9 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(869): ComplexController->renderFile()
+#10 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(782): ComplexController->renderPartial()
+#11 /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php(118): ComplexController->render()
+#12 unknown(0): ComplexController->actionUpdate()
+#13 /home/sergey/public_html/kaskadstroy/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#14 /home/sergey/public_html/kaskadstroy/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#15 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#16 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CFilterChain.php(133): ComplexController->runAction()
+#17 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#19 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CInlineFilter.php(58): ComplexController->filterAccessControl()
+#20 /home/sergey/public_html/kaskadstroy/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#21 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /home/sergey/public_html/kaskadstroy/yii/framework/web/CController.php(265): ComplexController->runActionWithFilters()
+#23 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(282): ComplexController->run()
+#24 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#25 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#26 /home/sergey/public_html/kaskadstroy/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=admin/complex/update&id=61
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/views/complex/_form.php (38)
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/views/complex/update.php (21)
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (118)
+2014/09/29 04:39:50 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:39:50 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:42:52 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:42:52 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:51:53 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (106)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:51:53 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (106)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:55:19 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:55:19 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:59:13 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:59:13 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:59:24 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 04:59:24 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 05:00:31 [warning] [application] Не удалось присвоить небезопасный атрибут "driveway_image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/09/29 05:00:31 [warning] [application] Не удалось присвоить небезопасный атрибут "image" класса "Complex".
+in /home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/ComplexController.php (104)
+in /home/sergey/public_html/kaskadstroy/index.php (13)
+2014/10/02 00:15:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/house/admin".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/house/adm...')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=admin/house/admin&complex_id=61
+HTTP_REFERER=http://kaskadstroy/index.php?r=admin/complex
+---
+2014/10/02 00:15:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/house/admin".' in /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/sergey/public_html/kaskadstroy/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('admin/house/adm...')
+#1 /home/sergey/public_html/kaskadstroy/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/sergey/public_html/kaskadstroy/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=admin/house/admin&complex_id=53
+HTTP_REFERER=http://kaskadstroy/index.php?r=admin/complex
+---

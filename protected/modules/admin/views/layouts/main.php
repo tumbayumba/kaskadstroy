@@ -33,6 +33,7 @@
 				array('label'=>'Главная', 'url'=>array('/admin/mainPage'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'О компании', 'url'=>array('/admin/about'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Миссия', 'url'=>array('/admin/mission'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Объекты', 'url'=>array('/admin/complex'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Услуги', 'url'=>array('/admin/services'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Ипотека', 'url'=>array('/admin/ipoteka'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Новости', 'url'=>array('/admin/news'), 'visible'=>!Yii::app()->user->isGuest),
