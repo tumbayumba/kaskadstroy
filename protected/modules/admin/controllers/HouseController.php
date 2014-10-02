@@ -1,6 +1,6 @@
 <?php
 
-class ComplexController extends Controller
+class HouseController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -52,8 +52,11 @@ class ComplexController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model = $this->loadModel($id);
+		$complex = Complex::model()->findByPk($model->complex_id);
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
+			'complex'=>$complex,
 		));
 	}
 
@@ -61,29 +64,32 @@ class ComplexController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($complex_id)
 	{
-		$model=new Complex;
+		$complex = Complex::model()->findByPk($complex_id);
+		$model=new House;
 
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Complex']))
+		if(isset($_POST['House']))
 		{
-			$model->attributes=$_POST['Complex'];
+			$model->attributes=$_POST['House'];
 			$model->image=CUploadedFile::getInstance($model,'image');
-			$model->driveway_image=CUploadedFile::getInstance($model,'driveway_image');
+			$model->floorplan_image=CUploadedFile::getInstance($model,'floorplan_image');
+			$model->complex_id = $complex_id;
 			if($model->save()){
 				if($model->image!='' && $model->image!=null)
-					$model->image->saveAs('images/complex/'.$model->image);
-				if($model->driveway_image!='' && $model->driveway_image!=null)
-					$model->driveway_image->saveAs('images/driveway_image/'.$model->driveway_image);
-				$this->redirect(array('view','id'=>$model->id));
+					$model->image->saveAs('images/house/'.$model->image);
+				if($model->floorplan_image!='' && $model->floorplan_image!=null)
+					$model->floorplan_image->saveAs('images/floorplan_image/'.$model->floorplan_image);
+				$this->redirect(array('admin','complex_id'=>$complex->id));
 			}
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'complex'=>$complex,
 		));
 	}
 
@@ -95,29 +101,30 @@ class ComplexController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$complex = Complex::model()->findByPk($model->complex_id);
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Complex']))
+		if(isset($_POST['House']))
 		{
-			$model->attributes=$_POST['Complex'];
+			$model->attributes=$_POST['House'];
 			
 			if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
 				$model->image=CUploadedFile::getInstance($model,'image');
-			if(CUploadedFile::getInstance($model,'driveway_image')!='' && CUploadedFile::getInstance($model,'driveway_image')!=null)
-				$model->driveway_image=CUploadedFile::getInstance($model,'driveway_image');
+			if(CUploadedFile::getInstance($model,'floorplan_image')!='' && CUploadedFile::getInstance($model,'floorplan_image')!=null)
+				$model->floorplan_image=CUploadedFile::getInstance($model,'floorplan_image');
 			if($model->save()){
 				if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
-					$model->image->saveAs('images/complex/'.$model->image);
-				if(CUploadedFile::getInstance($model,'driveway_image')!='' && CUploadedFile::getInstance($model,'driveway_image')!=null)
-					$model->driveway_image->saveAs('images/driveway_image/'.$model->driveway_image);
+					$model->image->saveAs('images/house/'.$model->image);
+				if(CUploadedFile::getInstance($model,'floorplan_image')!='' && CUploadedFile::getInstance($model,'floorplan_image')!=null)
+					$model->floorplan_image->saveAs('images/floorplan_image/'.$model->floorplan_image);
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+			'complex'=>$complex,
 		));
 	}
 
@@ -128,11 +135,12 @@ class ComplexController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model = $this->loadModel($id);
+		$model->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin','complex_id'=>$model->complex_id));
 	}
 
 	/**
@@ -140,7 +148,7 @@ class ComplexController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Complex');
+		$dataProvider=new CActiveDataProvider('House');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -149,15 +157,17 @@ class ComplexController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($complex_id)
 	{
-		$model=new Complex('search');
+		$complex = Complex::model()->findByPk($complex_id);
+		$model=new House('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Complex']))
-			$model->attributes=$_GET['Complex'];
+		if(isset($_GET['House']))
+			$model->attributes=$_GET['House'];
 
 		$this->render('admin',array(
 			'model'=>$model,
+			'complex'=>$complex,
 		));
 	}
 
@@ -165,12 +175,12 @@ class ComplexController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Complex the loaded model
+	 * @return House the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Complex::model()->findByPk($id);
+		$model=House::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -178,11 +188,11 @@ class ComplexController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Complex $model the model to be validated
+	 * @param House $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='complex-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='house-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

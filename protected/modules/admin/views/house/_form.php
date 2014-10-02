@@ -1,13 +1,13 @@
 <?php
-/* @var $this ComplexController */
-/* @var $model Complex */
+/* @var $this HouseController */
+/* @var $model House */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'complex-form',
+	'id'=>'house-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -21,36 +21,41 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'complex_name'); ?>
-		<?php echo $form->textArea($model,'complex_name',array('rows'=>3, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'complex_name'); ?>
+		<?php //echo $form->labelEx($model,'complex_id'); ?>
+		<?php //echo $form->textField($model,'complex_id',array('size'=>11,'maxlength'=>11)); ?>
+		<?php //echo $form->error($model,'complex_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'adress'); ?>
-		<?php echo $form->textArea($model,'adress',array('rows'=>3, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'adress'); ?>
+		<?php echo $form->labelEx($model,'house_name'); ?>
+		<?php echo $form->textField($model,'house_name',array()); ?>
+		<?php echo $form->error($model,'house_name'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'driveway_image'); ?>
-		<?php (isset($model->driveway_image))? $driveway_image = $model->driveway_image : $driveway_image = null; ?>
-		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/driveway_image/'.$driveway_image,'',array('height'=>150)); ?>
-		<?php echo $form->fileField($model,'driveway_image'); ?>
-		<?php echo $form->error($model,'driveway_image'); ?>
-	</div>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'image'); ?>
-		<?php (isset($model->image))? $image = $model->image : $image = null; ?>
-		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/complex/'.$image,'',array('height'=>150)); ?>
+		<?php (isset($model->image))? $image = $model->image : $image = 'house_default.jpg'; ?>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/house/'.$image,'',array('height'=>150)); ?>
 		<?php echo $form->fileField($model,'image'); ?>
 		<?php echo $form->error($model,'image'); ?>
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'floorplan_image'); ?>
+		<?php (isset($model->floorplan_image))? $floorplan_image = $model->floorplan_image : $floorplan_image = null; ?>
+		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/floorplan_image/'.$floorplan_image,'',array('height'=>150)); ?>
+		<?php echo $form->fileField($model,'floorplan_image'); ?>
+		<?php echo $form->error($model,'floorplan_image'); ?>
+	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'status'); ?>
+		<?php echo $form->textField($model,'status',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->error($model,'status'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>
-		<?php //echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
 		<?php
 		$this->widget('ext.ckeditor.CKEditor',array(
 		  "model"=>$model,                 # Data-Model
