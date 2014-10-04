@@ -1,13 +1,13 @@
 <?php
 
-class ComplexController extends Controller
+class HouseController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='/layouts/column2';
-	public $defaultAction='admin';
+	public $defaultAction='index';
 
 	/**
 	 * @return array action filters
@@ -29,15 +29,15 @@ class ComplexController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array(),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array(),
+				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -63,23 +63,16 @@ class ComplexController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Complex;
+		$model=new House;
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Complex']))
+		if(isset($_POST['House']))
 		{
-			$model->attributes=$_POST['Complex'];
-			$model->image=CUploadedFile::getInstance($model,'image');
-			$model->driveway_image=CUploadedFile::getInstance($model,'driveway_image');
-			if($model->save()){
-				if($model->image!='' && $model->image!=null)
-					$model->image->saveAs('images/complex/'.$model->image);
-				if($model->driveway_image!='' && $model->driveway_image!=null)
-					$model->driveway_image->saveAs('images/driveway_image/'.$model->driveway_image);
+			$model->attributes=$_POST['House'];
+			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
-			}
 		}
 
 		$this->render('create',array(
@@ -99,20 +92,11 @@ class ComplexController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Complex']))
+		if(isset($_POST['House']))
 		{
-			$model->attributes=$_POST['Complex'];
-			if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
-				$model->image=CUploadedFile::getInstance($model,'image');
-			if(CUploadedFile::getInstance($model,'driveway_image')!='' && CUploadedFile::getInstance($model,'driveway_image')!=null)
-				$model->driveway_image=CUploadedFile::getInstance($model,'driveway_image');
-			if($model->save()){
-				if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
-					$model->image->saveAs('images/complex/'.$model->image);
-				if(CUploadedFile::getInstance($model,'driveway_image')!='' && CUploadedFile::getInstance($model,'driveway_image')!=null)
-					$model->driveway_image->saveAs('images/driveway_image/'.$model->driveway_image);
+			$model->attributes=$_POST['House'];
+			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
-			}
 		}
 
 		$this->render('update',array(
@@ -137,11 +121,15 @@ class ComplexController extends Controller
 	/**
 	 * Lists all models.
 	 */
-	public function actionIndex()
+	public function actionIndex($complex_id)
 	{
-		$dataProvider=new CActiveDataProvider('Complex');
+		$dataProvider=new CActiveDataProvider('House');
+		$complex = Complex::model()->find('id=:cid',array(':cid'=>$complex_id));
+		$houses = House::model()->findAll(array('condition'=>'complex_id=:cid','params'=>array(':cid'=>$complex_id),'order'=>'house_name ASC'));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'complex'=>$complex,
+			'houses'=>$houses,
 		));
 	}
 
@@ -150,10 +138,10 @@ class ComplexController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Complex('search');
+		$model=new House('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Complex']))
-			$model->attributes=$_GET['Complex'];
+		if(isset($_GET['House']))
+			$model->attributes=$_GET['House'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -164,12 +152,12 @@ class ComplexController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Complex the loaded model
+	 * @return House the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Complex::model()->findByPk($id);
+		$model=House::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -177,11 +165,11 @@ class ComplexController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Complex $model the model to be validated
+	 * @param House $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='complex-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='house-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

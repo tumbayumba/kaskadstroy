@@ -1,6 +1,6 @@
 <?php
 
-class ComplexController extends Controller
+class AppartmentsController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -52,8 +52,11 @@ class ComplexController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model = $this->loadModel($id);
+		$house = House::model()->findByPk($model->house_id);
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
+			'house'=>$house,
 		));
 	}
 
@@ -61,29 +64,34 @@ class ComplexController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($house_id)
 	{
-		$model=new Complex;
+		$house = House::model()->findByPk($house_id);
+		$model=new Appartments;
 
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Complex']))
+		if(isset($_POST['Appartments']))
 		{
-			$model->attributes=$_POST['Complex'];
+			$model->attributes=$_POST['Appartments'];
 			$model->image=CUploadedFile::getInstance($model,'image');
-			$model->driveway_image=CUploadedFile::getInstance($model,'driveway_image');
+			$model->house_id = $house_id;
 			if($model->save()){
-				if($model->image!='' && $model->image!=null)
-					$model->image->saveAs('images/complex/'.$model->image);
-				if($model->driveway_image!='' && $model->driveway_image!=null)
-					$model->driveway_image->saveAs('images/driveway_image/'.$model->driveway_image);
-				$this->redirect(array('view','id'=>$model->id));
+				if($model->image!='' && $model->image!=null){
+					$uploaddir = 'images/complex/'.$house->house_name.'/';
+					if (!file_exists($uploaddir)){
+					   mkdir($uploaddir, 0700, true);
+					}
+					$model->image->saveAs($uploaddir.$model->image);
+				}
+				$this->redirect(array('admin','house_id'=>$house->id));
 			}
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
+			'house'=>$house,
 		));
 	}
 
@@ -95,28 +103,30 @@ class ComplexController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$house = House::model()->findByPk($model->house_id);
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
-		if(isset($_POST['Complex']))
+		if(isset($_POST['Appartments']))
 		{
-			$model->attributes=$_POST['Complex'];
+			$model->attributes=$_POST['Appartments'];
 			if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
 				$model->image=CUploadedFile::getInstance($model,'image');
-			if(CUploadedFile::getInstance($model,'driveway_image')!='' && CUploadedFile::getInstance($model,'driveway_image')!=null)
-				$model->driveway_image=CUploadedFile::getInstance($model,'driveway_image');
 			if($model->save()){
-				if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
-					$model->image->saveAs('images/complex/'.$model->image);
-				if(CUploadedFile::getInstance($model,'driveway_image')!='' && CUploadedFile::getInstance($model,'driveway_image')!=null)
-					$model->driveway_image->saveAs('images/driveway_image/'.$model->driveway_image);
-				$this->redirect(array('view','id'=>$model->id));
+				if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null){
+					$uploaddir = 'images/complex/'.$house->house_name.'/';
+					if (!file_exists($uploaddir)){
+					   mkdir($uploaddir, 0700, true);
+					}
+					$model->image->saveAs($uploaddir.$model->image);
+				}
+				$this->redirect(array('admin','house_id'=>$house->id));
 			}
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
+			'house'=>$house,
 		));
 	}
 
@@ -139,7 +149,7 @@ class ComplexController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Complex');
+		$dataProvider=new CActiveDataProvider('Appartments');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -148,15 +158,19 @@ class ComplexController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($house_id)
 	{
-		$model=new Complex('search');
+		$house = House::model()->findByPk($house_id);
+		$complex = Complex::model()->findByPk($house->complex_id);
+		$model=new Appartments('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Complex']))
-			$model->attributes=$_GET['Complex'];
+		if(isset($_GET['Appartments']))
+			$model->attributes=$_GET['Appartments'];
 
 		$this->render('admin',array(
 			'model'=>$model,
+			'house'=>$house,
+			'complex'=>$complex,
 		));
 	}
 
@@ -164,12 +178,12 @@ class ComplexController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Complex the loaded model
+	 * @return Appartments the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Complex::model()->findByPk($id);
+		$model=Appartments::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -177,14 +191,27 @@ class ComplexController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Complex $model the model to be validated
+	 * @param Appartments $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='complex-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='appartments-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	
+	public static function getType($type_id){
+		$type = Apptype::model()->find('id=:type_id',array(':type_id'=>$type_id));
+		return $type->name;
+	}
+	
+	public static function getTypesDropDown(){
+		$types = Apptype::model()->findAll();
+		foreach($types as $type){
+			$t[$type->id] = $type->name;
+		}
+		return $t;
 	}
 }

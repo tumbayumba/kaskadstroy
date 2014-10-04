@@ -56,7 +56,7 @@ $this->pageTitle=Yii::app()->name;
 									</li>
 									<li data-transition="random">
 										<!-- THE MAIN IMAGE IN THE 3 SLIDE -->
-										<img src="img/slides/slide7.jpg" alt="" />
+										<img src="img/slides/orange_flat.jpg" alt="" /><!--slide7.jpg-->
 
 										<div class="caption large_text randomrotate"
 											 data-x="100"
@@ -78,7 +78,8 @@ $this->pageTitle=Yii::app()->name;
 
 					</div>
 				</div>
- <div class="l-main-h">
+				
+<div class="l-main-h">
     <div class="l-submain for_pagehead">
         <div class="l-submain-h i-cf">
 			<div class="element animate_afr">
@@ -98,20 +99,24 @@ $this->pageTitle=Yii::app()->name;
 							<div class="w-services-h">
 								<div class="w-services-list">
 									
-									<div class="w-services-item">
-										<div class="w-services-item-h animate_wfc">
-											<div class="w-services-item-icon">
-												<!--<i class="icon-html5"></i>-->
-												<div class="w-services-item-icon-img">
-													<img src="img/icon-example.png" alt="icon"/>
+									<?php 
+									foreach($mainpage as $mp){
+										echo '<div class="w-services-item">
+											<div class="w-services-item-h animate_wfc">
+												<div class="w-services-item-icon">
+													<!--<i class="icon-html5"></i>-->
+													<div class="w-services-item-icon-img">
+														<img src="img/icon-example.png" alt="icon"/>
+													</div>
+												</div>											
+												<div class="w-services-item-text">
+													<!--<h3>Web Design</h3>-->
+													<p style="font-size:12px; text-align: justify;">'.$mp->description.'</p>
 												</div>
-											</div>											
-											<div class="w-services-item-text">
-												<h3>Web Design</h3>
-												<p style="font-size:12px; text-align: justify;">Для многих жителей столицы покупка квартиры в Подмосковье является оптимальным вариантом приобретения современного комфортного жилья. ЗАО «КАСКАДСТРОЙСЕРВИС» ведет строительство жилых комплексов в Московской области, осуществляя продажу квартир по ценам, доступным абсолютно всем.</p>
 											</div>
-										</div>
-									</div>
+										</div>';
+									}
+									?>
 								
 								</div>
 							</div>
@@ -119,9 +124,29 @@ $this->pageTitle=Yii::app()->name;
 						
 					</div>
 					<div class="one-third">
-						<h3>One Third</h3>
-						<p>At delectus doloremque dolores explicabo...</p>
-					</div>
+						<div class="widget">
+							<div class="w-bloglist date_atbottom">
+								<h4 class="w-bloglist-title">Последние новости</h4>
+								<div class="w-bloglist-list">
+										<?php
+										foreach($newz as $news){
+											$date = explode(' ',$news->create_date);
+											echo '<div class="element animate_afr">
+													  <div class="w-bloglist-entry">
+														<a class="w-bloglist-entry-link" href="blog-post.html">'.CHtml::link($news->header).'</a>
+														<span class="w-bloglist-entry-date">'.$date[0].'</span>
+													  </div>
+												  </div>';
+										}
+										echo '<div class="element animate_afr">';
+										echo CHtml::link('Новости',array('news/index'),array('class'=>'w-blog-entry-more g-btn size_small type_color'));
+										echo '</div>';
+										?>
+								</div>
+							</div>
+						</div>
+					</div><!--<div class="one-third">-->
+				
 				</div>
 			</div>
 			

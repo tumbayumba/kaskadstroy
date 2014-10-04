@@ -1,25 +1,28 @@
 <?php
 
 /**
- * This is the model class for table "tbl_house".
+ * This is the model class for table "tbl_appartments".
  *
- * The followings are the available columns in table 'tbl_house':
- * @property string $id
- * @property string $complex_id
- * @property string $house_name
- * @property string $floorplan_image
- * @property string $description
+ * The followings are the available columns in table 'tbl_appartments':
+ * @property integer $id
+ * @property integer $type_id
+ * @property integer $house_id
+ * @property string $square
+ * @property string $price2square
+ * @property string $price
  * @property string $image
- * @property string $status
+ * @property string $action
+ * @property integer $is_public
+ * @property string $description
  */
-class House extends CActiveRecord
+class Appartments extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'tbl_house';
+		return 'tbl_appartments';
 	}
 
 	/**
@@ -30,12 +33,14 @@ class House extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('house_name', 'required'),
-			array('complex_id', 'length', 'max'=>11),
-			array('house_name, floorplan_image, description, image, status', 'safe'),
+			array('type_id', 'required'),
+			array('type_id, house_id, is_public', 'numerical', 'integerOnly'=>true),
+			array('square, price2square, price', 'length', 'max'=>128),
+			array('image', 'length', 'max'=>255),
+			array('action, description', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, complex_id, house_name, floorplan_image, description, image, status', 'safe', 'on'=>'search'),
+			array('id, type_id, house_id, square, price2square, price, image, action, is_public, description', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,12 +62,15 @@ class House extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'complex_id' => 'Комплекс',
-			'house_name' => 'Название дома',
-			'floorplan_image' => 'План типового этажа',
+			'type_id' => 'Тип помещения',
+			'house_id' => 'Дом',
+			'square' => 'Площадь (м2)',
+			'price2square' => 'Цена за м2.(руб.)',
+			'price' => 'Цена (руб.)',
+			'image' => 'Планировка',
+			'action' => 'Акция',
+			'is_public' => 'Разместить',
 			'description' => 'Описание',
-			'image' => 'Фото дома',
-			'status' => 'Статус',
 		);
 	}
 
@@ -84,39 +92,42 @@ class House extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('complex_id',$this->complex_id,true);
-		$criteria->compare('house_name',$this->house_name,true);
-		$criteria->compare('floorplan_image',$this->floorplan_image,true);
-		$criteria->compare('description',$this->description,true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('type_id',$this->type_id);
+		$criteria->compare('house_id',$this->house_id);
+		$criteria->compare('square',$this->square,true);
+		$criteria->compare('price2square',$this->price2square,true);
+		$criteria->compare('price',$this->price,true);
 		$criteria->compare('image',$this->image,true);
-		$criteria->compare('status',$this->status,true);
+		$criteria->compare('action',$this->action,true);
+		$criteria->compare('is_public',$this->is_public);
+		$criteria->compare('description',$this->description,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
 	
-	public function mySearch($complex_id)
+	public function mySearch($house_id)
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
-		$criteria->condition = 'complex_id='.$complex_id;
+		$criteria->condition = 'house_id='.$house_id;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('complex_id',$this->complex_id,true);
-		$criteria->compare('house_name',$this->house_name,true);
-		$criteria->compare('floorplan_image',$this->floorplan_image,true);
-		$criteria->compare('description',$this->description,true);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('type_id',$this->type_id);
+		$criteria->compare('house_id',$this->house_id);
+		$criteria->compare('square',$this->square,true);
+		$criteria->compare('price2square',$this->price2square,true);
+		$criteria->compare('price',$this->price,true);
 		$criteria->compare('image',$this->image,true);
-		$criteria->compare('status',$this->status,true);
+		$criteria->compare('action',$this->action,true);
+		$criteria->compare('is_public',$this->is_public);
+		$criteria->compare('description',$this->description,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
-			'sort'=>array(
-				'defaultOrder'=>'house_name ASC',
-			 )
 		));
 	}
 
@@ -124,7 +135,7 @@ class House extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return House the static model class
+	 * @return Appartments the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

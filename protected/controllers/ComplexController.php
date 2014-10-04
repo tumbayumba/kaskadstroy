@@ -7,7 +7,7 @@ class ComplexController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='/layouts/column2';
-	public $defaultAction='admin';
+	public $defaultAction='index';
 
 	/**
 	 * @return array action filters
@@ -29,15 +29,15 @@ class ComplexController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array(),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array(),
+				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -66,20 +66,13 @@ class ComplexController extends Controller
 		$model=new Complex;
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Complex']))
 		{
 			$model->attributes=$_POST['Complex'];
-			$model->image=CUploadedFile::getInstance($model,'image');
-			$model->driveway_image=CUploadedFile::getInstance($model,'driveway_image');
-			if($model->save()){
-				if($model->image!='' && $model->image!=null)
-					$model->image->saveAs('images/complex/'.$model->image);
-				if($model->driveway_image!='' && $model->driveway_image!=null)
-					$model->driveway_image->saveAs('images/driveway_image/'.$model->driveway_image);
+			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
-			}
 		}
 
 		$this->render('create',array(
@@ -102,17 +95,8 @@ class ComplexController extends Controller
 		if(isset($_POST['Complex']))
 		{
 			$model->attributes=$_POST['Complex'];
-			if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
-				$model->image=CUploadedFile::getInstance($model,'image');
-			if(CUploadedFile::getInstance($model,'driveway_image')!='' && CUploadedFile::getInstance($model,'driveway_image')!=null)
-				$model->driveway_image=CUploadedFile::getInstance($model,'driveway_image');
-			if($model->save()){
-				if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
-					$model->image->saveAs('images/complex/'.$model->image);
-				if(CUploadedFile::getInstance($model,'driveway_image')!='' && CUploadedFile::getInstance($model,'driveway_image')!=null)
-					$model->driveway_image->saveAs('images/driveway_image/'.$model->driveway_image);
+			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
-			}
 		}
 
 		$this->render('update',array(
@@ -140,8 +124,10 @@ class ComplexController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Complex');
+		$objects = Complex::model()->findAll();
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'objects'=>$objects,
 		));
 	}
 

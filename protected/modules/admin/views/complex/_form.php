@@ -44,7 +44,7 @@
 		<?php echo $form->labelEx($model,'image'); ?>
 		<?php (isset($model->image))? $image = $model->image : $image = null; ?>
 		<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/complex/'.$image,'',array('height'=>150)); ?>
-		<?php echo $form->fileField($model,'image'); ?>
+		<?php echo $form->fileField($model,'image').' Рекомендуется 1000x500 '; ?>
 		<?php echo $form->error($model,'image'); ?>
 	</div>
 

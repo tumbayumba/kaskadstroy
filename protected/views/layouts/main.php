@@ -75,23 +75,7 @@
             <div class="l-header-h">
 				<div class="l-subheader at_top type_fixed">
 					<div class="l-subheader-h i-cf">
-						<!-- subheader -->
-						<!--<div class="w-search submit_inside">
-							<div class="w-search-h">
-								<a class="w-search-show" href="javascript:void(0)"></a>
-								<form class="w-search-form show_hidden" action="#">
-									<div class="w-search-input">
-										<div class="w-search-input-h">
-											<input type="text" value="" placeholder="enter the query"/>
-										</div>
-										<a class="w-search-close" href="javascript:void(0)" title="Close search"></a>
-									</div>
-									<div class="w-search-submit">
-										<input type="submit" value="Search" />
-									</div>
-								</form>
-							</div>
-						</div>-->
+						
 						<nav class="w-nav">
 							<div class="w-nav-h">
 								<div class="w-nav-select">
@@ -102,62 +86,47 @@
 									<div class="w-nav-list-h">
 										<div class="w-nav-item level_1 active">
 											<div class="w-nav-item-h">
-												<?php echo CHtml::link('О&nbspкомпании',array('/site/page', 'view'=>'about'),array('class'=>'w-nav-anchor level_1'));?>
+												<a href="index.php" class="w-nav-anchor level_1"><i class="icon-home"></i></a>
 											</div>
 										</div>
-										<div class="w-nav-item level_1 active">
+										<div class="w-nav-item level_1 ">
 											<div class="w-nav-item-h">
-												<?php echo CHtml::link('Миссия',array('/site/page', 'view'=>'mission'),array('class'=>'w-nav-anchor level_1'));?>
+												<?php echo CHtml::link('О&nbspкомпании',array('about/index'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>
-										<div class="w-nav-item level_1 active">
+										<div class="w-nav-item level_1 ">
 											<div class="w-nav-item-h">
-												<?php echo CHtml::link('Объекты',array('/site/objects'),array('class'=>'w-nav-anchor level_1'));?>
+												<?php echo CHtml::link('Миссия',array('mission/index'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>
-										<div class="w-nav-item level_1 active">
+										<div class="w-nav-item level_1 ">
+											<div class="w-nav-item-h">
+												<?php echo CHtml::link('Объекты',array('/complex/index'),array('class'=>'w-nav-anchor level_1'));?>
+											</div>
+										</div>
+										<div class="w-nav-item level_1 ">
 											<div class="w-nav-item-h">
 												<?php echo CHtml::link('Услуги',array('/site/services'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>
-										<div class="w-nav-item level_1 active">
+										<div class="w-nav-item level_1 ">
 											<div class="w-nav-item-h">
 												<?php echo CHtml::link('Ипотека',array('/ipoteka/ipoteka'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>
-										<div class="w-nav-item level_1 active">
+										<div class="w-nav-item level_1 ">
 											<div class="w-nav-item-h">
 												<?php echo CHtml::link('Контакты',array('/site/contact'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>
-										<div class="w-nav-item level_1 active">
+										<div class="w-nav-item level_1 ">
 											<div class="w-nav-item-h">
 												<?php echo CHtml::link('Новости',array('/site/news'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>
-										<?php 
-											if(Yii::app()->user->isGuest){
-										?>
-										<div class="w-nav-item level_1 active">
-											<div class="w-nav-item-h">
-												<?php echo CHtml::link('Войти',array('site/login'),array('class'=>'w-nav-anchor level_1'));?>
-											</div>
-										</div>
-										<?php 
-										}
-										else{
-										?>
-										<div class="w-nav-item level_1 active">
-											<div class="w-nav-item-h">
-												<?php echo CHtml::link('Выйти',array('site/logout'),array('class'=>'w-nav-anchor level_1'));?>
-											</div>
-										</div>
-										<?php
-										}
-										?>
 										<!--<div class="w-nav-item level_1 active">
 											<div class="w-nav-item-h">
-												<?php echo CHtml::link('Админка',array('/admin'),array('class'=>'w-nav-anchor level_1'));?>
+												<?php //echo CHtml::link('Админка',array('/admin'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>-->
 									</div>
@@ -168,17 +137,14 @@
 				</div>
             </div>
         </div>
-        <div class="l-subheader at_middle">
+        <div class="l-subheader at_middle" style="background-image: url(img/slides/slide3.jpg);">
 			<div class="l-subheader-h i-cf">
 
 				<div class="w-logo sloganat_bottom">
 					<div class="w-logo-h">
-						<?php echo CHtml::link('<!--<img class="w-logo-img" src="img/logo-orange.png" alt="Каскадстройсервис">-->
-							<span class="w-logo-title">
-								<span class="w-logo-title-h">Каскадстройсервис</span>
-							</span>',array('/site/index'),array('class'=>'w-nav-anchor level_1'));?>
+						
 						<div class="w-logo-slogan">
-							<div class="w-logo-slogan-h">Комфорт столицы в соснах Подмосковья</div>
+							<div class="w-logo-slogan-h animate_afl"><h1>Каскадстройсервис</h1></div>
 						</div>
 					</div>
 				</div>
@@ -203,7 +169,7 @@
 				<div class="two-thirds">
 					<div class="widget">
 						<h4>О нас</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.</p>
+						<p>ЗАО «КАСКАДСТРОЙСЕРВИС» - инвестиционно-строительная компания, более 10 лет успешно работающая в Москве и Московской области. </p>
 					</div>
 				</div>
 
@@ -229,8 +195,8 @@
 									<dd class="w-contacts-list-value">117342, г. Москва, ул. Обручева, д. 46</dd>
 									<dt class="w-contacts-list-key for_phone">Тел./факс:</dt>
 									<dd class="w-contacts-list-value">(495) 788-86-86,<br>(495) 334-19-90</dd>
-									<dt class="w-contacts-list-key for_email">Email:</dt>
-									<dd class="w-contacts-list-value"><a href="mailto:info@example.com">info@example.com</a></dd>
+									<!--<dt class="w-contacts-list-key for_email">Email:</dt>-->
+									<!--<dd class="w-contacts-list-value"><a href="mailto:info@example.com">info@example.com</a></dd>-->
 								</dl>
 							</div>
 						</div>

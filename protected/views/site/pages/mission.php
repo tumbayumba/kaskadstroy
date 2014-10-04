@@ -10,7 +10,6 @@ $this->pageTitle=Yii::app()->name;
 					<div class="l-submain-h g-html i-cf">
 						<div class="w-pagehead">
 							<h1>Миссия</h1>
-							<p>Small Caption Allowed Here</p>
 						</div>
 					</div>
 				</div>
@@ -23,50 +22,12 @@ $this->pageTitle=Yii::app()->name;
 							
 										<div class="w-tabs-section with_icon active">
 											<div class="w-tabs-section-title">
-												<span class="w-tabs-section-title-icon icon-beaker"></span>
 												<span class="w-tabs-section-title-text">Our Company Mission</span>
 												<span class="w-tabs-section-title-control"></span>
 											</div>
 											<div class="w-tabs-section-content">
 												<div class="w-tabs-section-content-h">
 													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis.</p>
-												</div>
-											</div>
-										</div>
-										<div class="w-tabs-section with_icon">
-											<div class="w-tabs-section-title">
-												<span class="w-tabs-section-title-icon icon-book"></span>
-												<span class="w-tabs-section-title-text">Title Goes Here</span>
-												<span class="w-tabs-section-title-control"></span>
-											</div>
-											<div class="w-tabs-section-content">
-												<div class="w-tabs-section-content-h">
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus.</p>
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate	dolore eveniet quis, quos tempore temporibus ut.</p>
-												</div>
-											</div>
-										</div>
-										<div class="w-tabs-section with_icon">
-											<div class="w-tabs-section-title">
-												<span class="w-tabs-section-title-icon icon-trophy"></span>
-												<span class="w-tabs-section-title-text">The Vittoria Philosophy</span>
-												<span class="w-tabs-section-title-control"></span>
-											</div>
-											<div class="w-tabs-section-content">
-												<div class="w-tabs-section-content-h">
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis.</p>
-												</div>
-											</div>
-										</div>
-										<div class="w-tabs-section with_icon">
-											<div class="w-tabs-section-title">
-												<span class="w-tabs-section-title-icon icon-cog"></span>
-												<span class="w-tabs-section-title-text">Another Tab Title</span>
-												<span class="w-tabs-section-title-control"></span>
-											</div>
-											<div class="w-tabs-section-content">
-												<div class="w-tabs-section-content-h">
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus.</p>
 												</div>
 											</div>
 										</div>
