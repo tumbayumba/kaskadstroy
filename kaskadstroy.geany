@@ -16,13 +16,20 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=4
-FILE_NAME_0=393;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/config/main.php;0;4
+current_page=8
+FILE_NAME_0=612;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/config/main.php;0;4
 FILE_NAME_1=6613;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/views/layouts/main.php;0;4
-FILE_NAME_2=3174;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/controllers/ComplexController.php;0;4
-FILE_NAME_3=1309;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/views/complex/index.php;0;4
-FILE_NAME_4=3252;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/controllers/HouseController.php;0;4
-FILE_NAME_5=3576;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/views/house/index.php;0;4
+FILE_NAME_2=4109;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/models/Appartments.php;0;4
+FILE_NAME_3=4796;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/controllers/AppartmentsController.php;0;4
+FILE_NAME_4=858;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/views/appartments/index.php;0;4
+FILE_NAME_5=0;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/views/appartments/view.php;0;4
+FILE_NAME_6=0;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/views/appartments/_view.php;0;4
+FILE_NAME_7=1342;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/models/Stages.php;0;4
+FILE_NAME_8=2125;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/StagesController.php;0;4
+FILE_NAME_9=1376;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/modules/admin/views/stages/admin.php;0;4
+FILE_NAME_10=464;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/modules/admin/views/stages/create.php;0;4
+FILE_NAME_11=578;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/modules/admin/views/stages/_form.php;0;4
+FILE_NAME_12=2342;PHP;0;16;1;1;0;/home/sergey/public_html/kaskadstroy/protected/modules/admin/controllers/AppartmentsController.php;0;4
 
 [VTE]
 last_dir=/root

@@ -79,9 +79,9 @@ class AppartmentsController extends Controller
 			$model->house_id = $house_id;
 			if($model->save()){
 				if($model->image!='' && $model->image!=null){
-					$uploaddir = 'images/complex/'.$house->house_name.'/';
+					$uploaddir = 'images/appartments/'.$house->house_name.'/';
 					if (!file_exists($uploaddir)){
-					   mkdir($uploaddir, 0700, true);
+					   mkdir($uploaddir, 0777, true);
 					}
 					$model->image->saveAs($uploaddir.$model->image);
 				}
@@ -114,7 +114,7 @@ class AppartmentsController extends Controller
 				$model->image=CUploadedFile::getInstance($model,'image');
 			if($model->save()){
 				if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null){
-					$uploaddir = 'images/complex/'.$house->house_name.'/';
+					$uploaddir = 'images/appartments/'.$house->house_name.'/';
 					if (!file_exists($uploaddir)){
 					   mkdir($uploaddir, 0700, true);
 					}

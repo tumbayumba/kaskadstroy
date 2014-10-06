@@ -49,7 +49,7 @@ $('.search-form form').submit(function(){
 			'value'=>'CHtml::link($data->house_name,array("appartments/admin","house_id"=>$data->id),array("style"=>"text-decoration: none;"))', 
 		),
 		//'floorplan_image',
-		'description',
+		//'description',
 		//'image',
 		'status',
 		array(

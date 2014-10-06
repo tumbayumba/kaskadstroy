@@ -10,6 +10,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	//array('label'=>'List Appartments', 'url'=>array('index')),
 	array('label'=>'Добавить помещение', 'url'=>array('create','house_id'=>$house->id)),
+	array('label'=>'Этапы строительства', 'url'=>array('stages/admin','house_id'=>$house->id)),
 );
 
 /*Yii::app()->clientScript->registerScript('search', "

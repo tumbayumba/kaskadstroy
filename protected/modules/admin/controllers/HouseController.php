@@ -102,6 +102,7 @@ class HouseController extends Controller
 	{
 		$model=$this->loadModel($id);
 		$complex = Complex::model()->findByPk($model->complex_id);
+		$house=$this->loadModel($id);
 		// Uncomment the following line if AJAX validation is needed
 		$this->performAjaxValidation($model);
 
@@ -109,10 +110,18 @@ class HouseController extends Controller
 		{
 			$model->attributes=$_POST['House'];
 			
-			if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
+			if(CUploadedFile::getInstance($model,'image')!='' || CUploadedFile::getInstance($model,'image')!=null){
 				$model->image=CUploadedFile::getInstance($model,'image');
-			if(CUploadedFile::getInstance($model,'floorplan_image')!='' && CUploadedFile::getInstance($model,'floorplan_image')!=null)
+			}
+			else{
+				($house->image!=null && $house->image!='')? $model->image = $house->image : $model->image = 'house_default.jpg';
+			}
+			if(CUploadedFile::getInstance($model,'floorplan_image')!='' && CUploadedFile::getInstance($model,'floorplan_image')!=null){
 				$model->floorplan_image=CUploadedFile::getInstance($model,'floorplan_image');
+			}
+			else{
+				($house->floorplan_image!=null && $house->floorplan_image!='')? $model->floorplan_image=$house->floorplan_image : $model->floorplan_image=$model->floorplan_image;
+			}
 			if($model->save()){
 				if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
 					$model->image->saveAs('images/house/'.$model->image);

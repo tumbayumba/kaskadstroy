@@ -52,7 +52,7 @@ $this->pageTitle=Yii::app()->name;
 											 data-y="255"
 											 data-speed="500"
 											 data-start="1200"
-											 data-easing="easeOutExpo"  ><a href="http://themeforest.net/item/vittoria-responsive-html5-template/4751524?ref=upsolution" target="_blank">Связаться с нами</a></div>
+											 data-easing="easeOutExpo"  ><?php echo CHtml::link('Связаться с нами',array('site/contact'));?></div>
 									</li>
 									<li data-transition="random">
 										<!-- THE MAIN IMAGE IN THE 3 SLIDE -->
@@ -133,7 +133,7 @@ $this->pageTitle=Yii::app()->name;
 											$date = explode(' ',$news->create_date);
 											echo '<div class="element animate_afr">
 													  <div class="w-bloglist-entry">
-														<a class="w-bloglist-entry-link" href="blog-post.html">'.CHtml::link($news->header).'</a>
+														<a class="w-bloglist-entry-link" href="blog-post.html">'.CHtml::link($news->header,array('news/index','id'=>$news->id),array()).'</a>
 														<span class="w-bloglist-entry-date">'.$date[0].'</span>
 													  </div>
 												  </div>';

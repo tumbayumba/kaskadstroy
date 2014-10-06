@@ -7,6 +7,7 @@ class IpotekaController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
+	public $defaultAction='index';
 
 	/**
 	 * @return array action filters
@@ -123,8 +124,10 @@ class IpotekaController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Ipoteka');
+		$ipoteka = Ipoteka::model()->findAll();
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'ipoteka'=>$ipoteka,
 		));
 	}
 

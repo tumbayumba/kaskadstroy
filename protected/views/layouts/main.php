@@ -106,22 +106,22 @@
 										</div>
 										<div class="w-nav-item level_1 ">
 											<div class="w-nav-item-h">
-												<?php echo CHtml::link('Услуги',array('/site/services'),array('class'=>'w-nav-anchor level_1'));?>
+												<?php echo CHtml::link('Услуги',array('/services/index'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>
 										<div class="w-nav-item level_1 ">
 											<div class="w-nav-item-h">
-												<?php echo CHtml::link('Ипотека',array('/ipoteka/ipoteka'),array('class'=>'w-nav-anchor level_1'));?>
+												<?php echo CHtml::link('Ипотека',array('/ipoteka/index'),array('class'=>'w-nav-anchor level_1'));?>
+											</div>
+										</div>
+										<div class="w-nav-item level_1 ">
+											<div class="w-nav-item-h">
+												<?php echo CHtml::link('Новости',array('/news/index'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>
 										<div class="w-nav-item level_1 ">
 											<div class="w-nav-item-h">
 												<?php echo CHtml::link('Контакты',array('/site/contact'),array('class'=>'w-nav-anchor level_1'));?>
-											</div>
-										</div>
-										<div class="w-nav-item level_1 ">
-											<div class="w-nav-item-h">
-												<?php echo CHtml::link('Новости',array('/site/news'),array('class'=>'w-nav-anchor level_1'));?>
 											</div>
 										</div>
 										<!--<div class="w-nav-item level_1 active">
@@ -212,7 +212,7 @@
 
 				<div class="w-copyright">Copyright &copy; <?php echo date('Y'); ?><br/></div>
 
-				<div class="w-socials">
+				<!--<div class="w-socials">
 					<div class="w-socials-h">
 						<div class="w-socials-list">
 
@@ -373,7 +373,7 @@
 							
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 			</div>
 		</div>

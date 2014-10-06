@@ -105,7 +105,7 @@
 									</div>
 									<div class="w-actionbox-controls animate_afr">
 										<?php
-										echo CHtml::link('Продажа квартир',array(),array('class'=>'w-actionbox-button g-btn size_big type_color'));
+										echo CHtml::link('Продажа квартир',array('appartments/summary'),array('class'=>'w-actionbox-button g-btn size_big type_color'));
 										?>
 									</div>
 									<!--<div class="one-third animate_afr">

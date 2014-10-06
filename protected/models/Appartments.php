@@ -130,6 +130,34 @@ class Appartments extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function summarySearch($complex_id)
+	{
+		// @todo Please modify the following code to remove attributes that should not be searched.
+		$complex = Complex::model()->find(array('condition'=>'id=:cid','params'=>array(':cid'=>$complex_id)));
+		$house = House::model()->findAll(array('condition'=>'complex_id=:cid','params'=>array(':cid'=>$complex_id)));
+		foreach($house as $h){
+			$house_id_arr[] = $h->id; 
+		}
+		$string = implode(',',$house_id_arr);
+		$criteria=new CDbCriteria;
+		$criteria->condition = 'is_public=1 AND house_id IN ('.$string.')';
+
+		$criteria->compare('id',$this->id);
+		$criteria->compare('type_id',$this->type_id);
+		$criteria->compare('house_id',$this->house_id);
+		$criteria->compare('square',$this->square,true);
+		$criteria->compare('price2square',$this->price2square,true);
+		$criteria->compare('price',$this->price,true);
+		$criteria->compare('image',$this->image,true);
+		$criteria->compare('action',$this->action,true);
+		$criteria->compare('is_public',$this->is_public);
+		$criteria->compare('description',$this->description,true);
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
 
 	/**
 	 * Returns the static model of the specified AR class.

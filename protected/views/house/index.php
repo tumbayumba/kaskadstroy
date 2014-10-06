@@ -27,6 +27,12 @@
 						</div>-->
 						<div class="g-cols">
 							<div class="two-thirds">
+								<h1 style="text-align: center;"><div class="animate_afc">Наши проекты</div></h1>
+								<div class="hr hr_short">
+									<span class="hr-h">
+										<span class="hr-hh"></span>
+									</span>
+								</div>
 								<div class="w-portfolio columns_4">
 									<div class="w-portfolio-h">
 										<div class="w-portfolio-list">
@@ -60,7 +66,7 @@
 										<span class="hr-hh"></span>
 									</span>
 								</div>
-								<p style="text-align: center;"><?php echo CHtml::link('Продажа квартир',array(),array('class'=>'w-actionbox-button g-btn size_big type_color animate_afc'));?></p>
+								<p style="text-align: center;"><?php echo CHtml::link('Продажа квартир',array('appartments/summary'),array('class'=>'w-actionbox-button g-btn size_big type_color animate_afc'));?></p>
 								<hr>
 								<h2 class="w-blog-entry-title animate_afl">О комплексе:</h2>
 								<div class="w-blog-entry-body animate_afc">
