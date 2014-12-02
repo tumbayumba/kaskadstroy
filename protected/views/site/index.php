@@ -8,10 +8,9 @@ $this->pageTitle=Yii::app()->name;
 					<div class="l-subheader-h i-cf">
 
 						<div class="fullwidthbanner-container">
-							<div class="fullwidthbanner">
+							<div class="fullwidthbanner">								
 								<ul>
-									<li data-transition="fade">
-										<!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+									<!--<li data-transition="fade">
 										<img src="img/slides/slide4.jpg"/>
 										<div class="caption medium_color lfr"
 											 data-x="100"
@@ -33,7 +32,6 @@ $this->pageTitle=Yii::app()->name;
 											 data-easing="easeOutExpo"  >Спецпредложения</div>
 									</li>
 									<li data-transition="papercut">
-										<!-- THE MAIN IMAGE IN THE 2 SLIDE -->
 										<img src="img/slides/slide5.jpg" alt="" />
 										<div class="caption large_text lfr"
 											 data-x="100"
@@ -52,30 +50,58 @@ $this->pageTitle=Yii::app()->name;
 											 data-y="255"
 											 data-speed="500"
 											 data-start="1200"
-											 data-easing="easeOutExpo"  ><?php echo CHtml::link('Связаться с нами',array('site/contact'));?></div>
-									</li>
-									<li data-transition="random">
-										<!-- THE MAIN IMAGE IN THE 3 SLIDE -->
-										<img src="img/slides/orange_flat.jpg" alt="" /><!--slide7.jpg-->
+											 data-easing="easeOutExpo"  ><?php //echo CHtml::link('Связаться с нами',array('site/contact'));?></div>
+									</li>-->
+									<?php
+									foreach($slider as $slide){
+										$string = '';
+										$cnt = 0;
+										$content = $slide->content;
+										for($i=0;$i<strlen($slide->content);$i++){
+											if($content[$i]==' '){
+												$cnt++;
+												if($cnt>5){
+													$string .= '<br>';
+													$cnt = 0;
+												}
+												$string .= $content[$i];
+											}
+											else{
+												$string .= $content[$i];
+											}
+										}
+										echo '<li data-transition="random">
+											<img src="img/slides/'.$slide->image.'" alt="" />
 
-										<div class="caption large_text randomrotate"
-											 data-x="100"
-											 data-y="150"
-											 data-speed="500"
-											 data-start="800"
-											 data-easing="easeOutExpo"  >Купить квартиру</div>
-										<div class="caption medium_white randomrotate"
-											 data-x="100"
-											 data-y="220"
-											 data-speed="500"
-											 data-start="1200"
-											 data-easing="easeOutExpo"  >в новостройках Подмосковья</div>
-									</li>
-									
+											<div class="caption large_text randomrotate"
+												 data-x="100"
+												 data-y="150"
+												 data-speed="500"
+												 data-start="800"
+												 data-easing="easeOutExpo"  >'.$slide->header.'</div>
+											<div class="caption medium_white randomrotate"
+												 data-x="100"
+												 data-y="220"
+												 data-speed="500"
+												 data-start="1200"
+												 data-easing="easeOutExpo"  >'.$string.'</div>
+										</li>';
+									}
+									?>
 								</ul>
 							</div>
 						</div>
-
+						<!--logo-->
+						<div style=" 
+									width:200px; height:200px;
+									position:relative; z-index:10;
+									background-repeat:no-repeat;
+									margin-left:41%;
+									margin-top:180px;
+						">
+					    <?php echo CHtml::link(CHtml::image(Yii::app()->request->baseUrl.'/img/logo.png',''),array('/site/index'));?>
+						</div>
+						<!--end of logo-->
 					</div>
 				</div>
 				

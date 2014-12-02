@@ -1,13 +1,13 @@
 <?php
 
-class AppartmentsController extends Controller
+class FooterController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='/layouts/column2';
-	public $defaultAction='admin';
+	public $defaultAction = 'admin';
 
 	/**
 	 * @return array action filters
@@ -33,7 +33,7 @@ class AppartmentsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete'),
+				'actions'=>array('create','update','index','view','admin','delete'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -52,11 +52,8 @@ class AppartmentsController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$model = $this->loadModel($id);
-		$house = House::model()->findByPk($model->house_id);
 		$this->render('view',array(
-			'model'=>$model,
-			'house'=>$house,
+			'model'=>$this->loadModel($id),
 		));
 	}
 
@@ -64,34 +61,22 @@ class AppartmentsController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate($house_id)
+	public function actionCreate()
 	{
-		$house = House::model()->findByPk($house_id);
-		$model=new Appartments;
+		$model=new Footer;
 
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Appartments']))
+		if(isset($_POST['Footer']))
 		{
-			$model->attributes=$_POST['Appartments'];
-			$model->image=CUploadedFile::getInstance($model,'image');
-			$model->house_id = $house_id;
-			if($model->save()){
-				if($model->image!='' && $model->image!=null){
-					$uploaddir = 'images/appartments/'.$house->house_name.'/';
-					if (!file_exists($uploaddir)){
-					   mkdir($uploaddir, 0777, true);
-					}
-					$model->image->saveAs($uploaddir.$model->image);
-				}
-				$this->redirect(array('admin','house_id'=>$house->id));
-			}
+			$model->attributes=$_POST['Footer'];
+			if($model->save())
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
-			'house'=>$house,
 		));
 	}
 
@@ -103,30 +88,20 @@ class AppartmentsController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-		$house = House::model()->findByPk($model->house_id);
+		$footer = Footer::model()->findAll();
 		// Uncomment the following line if AJAX validation is needed
-		$this->performAjaxValidation($model);
+		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Appartments']))
+		if(isset($_POST['Footer']))
 		{
-			$model->attributes=$_POST['Appartments'];
-			if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null)
-				$model->image=CUploadedFile::getInstance($model,'image');
-			if($model->save()){
-				if(CUploadedFile::getInstance($model,'image')!='' && CUploadedFile::getInstance($model,'image')!=null){
-					$uploaddir = 'images/appartments/'.$house->house_name.'/';
-					if (!file_exists($uploaddir)){
-					   mkdir($uploaddir, 0777, true);
-					}
-					$model->image->saveAs($uploaddir.$model->image);
-				}
-				$this->redirect(array('admin','house_id'=>$house->id));
-			}
+			$model->attributes=$_POST['Footer'];
+			if($model->save())
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('update',array(
 			'model'=>$model,
-			'house'=>$house,
+			'footer'=>$footer,
 		));
 	}
 
@@ -149,7 +124,7 @@ class AppartmentsController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Appartments');
+		$dataProvider=new CActiveDataProvider('Footer');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -158,19 +133,17 @@ class AppartmentsController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin($house_id)
+	public function actionAdmin()
 	{
-		$house = House::model()->findByPk($house_id);
-		$complex = Complex::model()->findByPk($house->complex_id);
-		$model=new Appartments('search');
+		$model=new Footer('search');
+		$footer = Footer::model()->findAll();
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Appartments']))
-			$model->attributes=$_GET['Appartments'];
+		if(isset($_GET['Footer']))
+			$model->attributes=$_GET['Footer'];
 
 		$this->render('admin',array(
 			'model'=>$model,
-			'house'=>$house,
-			'complex'=>$complex,
+			'footer'=>$footer,
 		));
 	}
 
@@ -178,12 +151,12 @@ class AppartmentsController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Appartments the loaded model
+	 * @return Footer the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Appartments::model()->findByPk($id);
+		$model=Footer::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -191,27 +164,14 @@ class AppartmentsController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Appartments $model the model to be validated
+	 * @param Footer $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='appartments-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='footer-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-	}
-	
-	public static function getType($type_id){
-		$type = Apptype::model()->find('id=:type_id',array(':type_id'=>$type_id));
-		return $type->name;
-	}
-	
-	public static function getTypesDropDown(){
-		$types = Apptype::model()->findAll();
-		foreach($types as $type){
-			$t[$type->id] = $type->name;
-		}
-		return $t;
 	}
 }

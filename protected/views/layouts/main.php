@@ -144,7 +144,8 @@
 					<div class="w-logo-h">
 						
 						<div class="w-logo-slogan">
-							<div class="w-logo-slogan-h animate_afl"><h1>Каскадстройсервис</h1></div>
+							<!--<div class="w-logo-slogan-h animate_afl"><h1>Каскадстройсервис</h1></div>-->
+							<div class="w-logo-slogan-h animate_afl" style="margin-top:-30px;"><?php echo CHtml::link(CHtml::image(Yii::app()->request->baseUrl.'/img/logo.png',''),array('/site/index'));?></div>
 						</div>
 					</div>
 				</div>
@@ -165,52 +166,41 @@
 		<!-- subfooter: top -->
 		<div class="l-subfooter at_top">
 			<div class="l-subfooter-h g-cols cols_fluid">
-
-				<div class="two-thirds">
-					<div class="widget">
-						<h4>О нас</h4>
-						<p>ЗАО «КАСКАДСТРОЙСЕРВИС» - инвестиционно-строительная компания, более 10 лет успешно работающая в Москве и Московской области. </p>
-					</div>
-				</div>
-
-				<!--<div class="one-third">
-					<div class="widget">
-						<div class="w-twitter">
-							<div class="w-twitter-h">
-								<h4 class="w-twitter-title">Recent tweets</h4>
-								<div class="w-twitter-tweets"></div>
-
-							</div>
+				<?php
+				$footer = Footer::model()->find();
+					echo '<div class="two-thirds">
+						<div class="widget">
+							<h4>'.$footer->header.'</h4>
+							<p>'.$footer->content.'</p>
 						</div>
 					</div>
-				</div>-->
-
-				<div class="one-third">
-					<div class="widget">
-						<div class="w-contacts">
-							<div class="w-contacts-h">
-								<h4 class="w-contacts-title">Контакты</h4>
-								<dl class="w-contacts-list">
-									<dt class="w-contacts-list-key for_address">Адресс:</dt>
-									<dd class="w-contacts-list-value">117342, г. Москва, ул. Обручева, д. 46</dd>
-									<dt class="w-contacts-list-key for_phone">Тел./факс:</dt>
-									<dd class="w-contacts-list-value">(495) 788-86-86,<br>(495) 334-19-90</dd>
-									<!--<dt class="w-contacts-list-key for_email">Email:</dt>-->
-									<!--<dd class="w-contacts-list-value"><a href="mailto:info@example.com">info@example.com</a></dd>-->
-								</dl>
+					<div class="one-third">
+						<div class="widget">
+							<div class="w-contacts">
+								<div class="w-contacts-h">
+									<h4 class="w-contacts-title">Контакты</h4>
+									<dl class="w-contacts-list">
+										<dt class="w-contacts-list-key for_address">Адресс:</dt>
+										<dd class="w-contacts-list-value">'.$footer->adress.'</dd>
+										<dt class="w-contacts-list-key for_phone">Тел./факс:</dt>
+										<dd class="w-contacts-list-value">'.$footer->phone.'</dd>
+										<!--<dt class="w-contacts-list-key for_email">Email:</dt>-->
+										<!--<dd class="w-contacts-list-value"><a href="mailto:info@example.com">info@example.com</a></dd>-->
+									</dl>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
+					</div>';
+				?>
 
 			</div>
 		</div>
 
 		<!-- subfooter: bottom -->
-		<div class="l-subfooter at_bottom">
+		<!--<div class="l-subfooter at_bottom">
 			<div class="l-subfooter-h i-cf">
 
-				<div class="w-copyright">Copyright &copy; <?php echo date('Y'); ?><br/></div>
+				<div class="w-copyright">Copyright &copy; <?php //echo date('Y'); ?><br/></div>
 
 				<!--<div class="w-socials">
 					<div class="w-socials-h">
@@ -363,7 +353,7 @@
 							<div class="w-socials-item vk">
 								<a class="w-socials-item-link" target="_blank" href="javascript:void(0);">
 									<i class="iconsocial-vk"></i>
-								</a>
+								</a>. 
 								<div class="w-socials-item-popup">
 									<div class="w-socials-item-popup-h">
 										<span class="w-socials-item-popup-text">Vkontakte</span>
@@ -375,10 +365,10 @@
 					</div>
 				</div>-->
 
-			</div>
+			<!--</div>
 		</div>
 
-	</div>
+	</div>-->
 </div>
 <!-- /FOOTER -->
 </body>

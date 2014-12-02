@@ -31,6 +31,8 @@
 			'items'=>array(
 				array('label'=>'На сайт', 'url'=>array('/site/index'), 'itemOptions'=>array('style'=>'background: orange;')),
 				array('label'=>'Главная', 'url'=>array('/admin/mainPage'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Слайдер', 'url'=>array('/admin/slider'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Подвал', 'url'=>array('/admin/footer'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'О компании', 'url'=>array('/admin/about'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Миссия', 'url'=>array('/admin/mission'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Объекты', 'url'=>array('/admin/complex'), 'visible'=>!Yii::app()->user->isGuest),

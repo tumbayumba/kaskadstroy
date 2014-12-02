@@ -28,12 +28,14 @@ class SiteController extends Controller
 	public function actionIndex()
 	{
 		$newz = News::model()->findAll(array('order'=>'create_date DESC','limit'=>5));
+		$slider = Slider::model()->findAll();
 		$mainpage = MainPage::model()->findAll();
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index',array(
 			'mainpage'=>$mainpage,
 			'newz'=>$newz,
+			'slider'=>$slider,
 		));
 	}
 
